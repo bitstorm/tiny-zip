@@ -206,6 +206,7 @@
 				<version>${version.maven-javadoc-plugin}</version>
 				<configuration>
 					<encoding>UTF-8</encoding>
+					<failsOnError>false</failsOnError>
 				</configuration>
 				<executions>
 					<execution>
