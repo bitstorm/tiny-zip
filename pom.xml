@@ -6,8 +6,8 @@
 	<artifactId>tinyzip-core</artifactId>
 	<packaging>jar</packaging>
 	<version>1.0.0-SNAPSHOT</version>
-	<name>split-zip</name>
-	<url>http://maven.apache.org</url>
+	<name>tiny-zip</name>
+	<url>https://github.com/bitstorm/tiny-zip</url>
 
 	<licenses>
 		<license>
