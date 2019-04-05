@@ -205,8 +205,12 @@
 				<artifactId>maven-javadoc-plugin</artifactId>
 				<version>${version.maven-javadoc-plugin}</version>
 				<configuration>
-					<encoding>UTF-8</encoding>
-					<failsOnError>false</failsOnError>
+					<quiet>true</quiet>
+					<links>
+						<link>http://docs.oracle.com/javase/8/docs/api/</link>
+					</links>
+					<failOnError>false</failOnError>
+					<doclint>none</doclint>
 				</configuration>
 				<executions>
 					<execution>
