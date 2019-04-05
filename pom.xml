@@ -3,7 +3,7 @@
 	<groupId>io.github.bitstorm</groupId>
 	<artifactId>tinyzip-core</artifactId>
 	<packaging>jar</packaging>
-	<version>1.0.0</version>
+	<version>1.0.1-SNAPSHOT</version>
 	<name>tiny-zip</name>
 	<description>The missing Zip library for Java.</description>
 	<url>https://github.com/bitstorm/tiny-zip</url>
