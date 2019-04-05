@@ -13,8 +13,8 @@ TinyZip is released under under the terms of the Apache Software Foundation lice
 ## Maven dependency
 ```
 <dependency>
-	<groupId>org.tinyzip</groupId>
-	<artifactId>tinyzip</artifactId>
+	<groupId>io.github.bitstorm</groupId>
+	<artifactId>tinyzip-core</artifactId>
 	<version>1.0.0</version>
 </dependency>	
 ```
