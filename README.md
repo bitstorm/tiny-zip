@@ -1,7 +1,7 @@
 # TinyZip, the missing Java ZIP library
 
 Java offers support for the ZIP file format through package `java.util.zip` package since its very first versions. However this kind of support is limited to I/O streams and algorithm implementation, without any utility class for the file system.
-That's why so many projects (both open and closed source) have their own version of `ZipUtils` class that try to fill the gap!  
+That's why so many projects (both open and closed source) have their own version of `ZipUtils` class that tries to fill the gap!  
 This library aims to finally offer a light, not over-bloated solution that avoids to reinvent the wheel each time we need to work with ZIP files.  
 In addition, as its name suggest TinyZip has been designed to be as small as possible: it weights less than 15 kb, isn't tiny enough for you :-)?
 
