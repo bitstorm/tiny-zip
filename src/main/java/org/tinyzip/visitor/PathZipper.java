@@ -85,7 +85,7 @@ public class PathZipper implements Consumer<Path> {
     try {
       zipOut.putNextEntry(new ZipEntry(path.toString() + '/'));
     } catch (IOException e) {
-      e.printStackTrace();
+        throw new RuntimeException(e);
     }
   }
 
