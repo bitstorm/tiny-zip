@@ -17,6 +17,7 @@ package org.tinyzip.visitor;
 import java.io.BufferedInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.UncheckedIOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Iterator;
@@ -63,7 +64,7 @@ public class PathZipper implements Consumer<Path> {
 
       return Files.size(path);
     } catch (IOException e) {
-      throw new RuntimeException(e);
+      throw new UncheckedIOException(e);
     }
   }
 
@@ -77,7 +78,7 @@ public class PathZipper implements Consumer<Path> {
         zipOut.write(data, 0, count);
       }
     } catch (IOException e) {
-      throw new RuntimeException(e);
+      throw new UncheckedIOException(e);
     }
   }
 
@@ -85,7 +86,7 @@ public class PathZipper implements Consumer<Path> {
     try {
       zipOut.putNextEntry(new ZipEntry(path.toString() + '/'));
     } catch (IOException e) {
-        throw new RuntimeException(e);
+        throw new UncheckedIOException(e);
     }
   }
 
@@ -109,7 +110,7 @@ public class PathZipper implements Consumer<Path> {
         totalSize = Files.size(path);
       }
     } catch (IOException e) {
-      throw new RuntimeException(e);
+      throw new UncheckedIOException(e);
     }
 
     return totalSize;
