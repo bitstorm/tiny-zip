@@ -54,9 +54,7 @@ public class ZipParameters {
    * Instantiates a new zip parameters.
    */
   public ZipParameters() {
-    this.bufferSize = DEFAULT_BUFFER_SIZE;
-    this.progressObserver = Optional.ofNullable(null);
-    this.includeBaseFolderName = true;
+    this(Optional.ofNullable(null), DEFAULT_BUFFER_SIZE, true);
   }
 
   /**
@@ -65,9 +63,7 @@ public class ZipParameters {
    * @param bufferSize the size in bytes of the buffer used to read/write the zip stream
    */
   public ZipParameters(int bufferSize) {
-    this.bufferSize = bufferSize;
-    this.progressObserver = Optional.ofNullable(null);
-    this.includeBaseFolderName = true;
+    this(Optional.ofNullable(null), bufferSize, true);
   }
 
   /**
@@ -77,9 +73,7 @@ public class ZipParameters {
    *        zip file (true) or not (false)
    */
   public ZipParameters(boolean includeBaseFolderName) {
-    this.bufferSize = DEFAULT_BUFFER_SIZE;
-    this.progressObserver = Optional.ofNullable(null);
-    this.includeBaseFolderName = includeBaseFolderName;
+      this(Optional.ofNullable(null), DEFAULT_BUFFER_SIZE, includeBaseFolderName);
   }
 
   /**
@@ -93,9 +87,7 @@ public class ZipParameters {
    */
   public ZipParameters(BiConsumer<Double, String> progressObserver, int bufferSize,
       boolean includeBaseFolderName) {
-    this.progressObserver = Optional.ofNullable(progressObserver);
-    this.bufferSize = bufferSize;
-    this.includeBaseFolderName = includeBaseFolderName;
+    this(Optional.ofNullable(progressObserver), bufferSize, includeBaseFolderName);
   }
 
   /**
@@ -121,9 +113,7 @@ public class ZipParameters {
    * @param progressObserver the progress observer
    */
   public ZipParameters(BiConsumer<Double, String> progressObserver) {
-    this.bufferSize = DEFAULT_BUFFER_SIZE;
-    this.progressObserver = Optional.ofNullable(progressObserver);
-    this.includeBaseFolderName = true;
+    this(Optional.ofNullable(progressObserver), DEFAULT_BUFFER_SIZE, true);
   }
 
 
@@ -134,9 +124,7 @@ public class ZipParameters {
    * @param progressObserver the progress observer
    */
   public ZipParameters(boolean includeBaseFolderName, BiConsumer<Double, String> progressObserver) {
-    this.bufferSize = DEFAULT_BUFFER_SIZE;
-    this.progressObserver = Optional.ofNullable(progressObserver);
-    this.includeBaseFolderName = includeBaseFolderName;
+    this(Optional.ofNullable(progressObserver), DEFAULT_BUFFER_SIZE, includeBaseFolderName);
   }
 
   /**

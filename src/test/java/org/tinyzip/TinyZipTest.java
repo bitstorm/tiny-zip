@@ -16,6 +16,9 @@ package org.tinyzip;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
+import org.junit.Before;
+import org.junit.Test;
+import org.tinyzip.parameters.ZipParameters;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
@@ -32,9 +35,6 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.stream.Collectors;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
-import org.junit.Before;
-import org.junit.Test;
-import org.tinyzip.parameters.ZipParameters;
 
 public class TinyZipTest {
   private static final String TEMP_DIR = System.getProperty("java.io.tmpdir");
